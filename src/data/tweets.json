@@ -1,0 +1,58 @@
+{
+	"tweets": [
+		{
+			"id": "1",
+			"time": "45",
+			"nickname": "eric",
+			"likes": 43,
+			"post": "Some quick example text to build on the card title and make up the bulk of the cards content.Card titles are used by adding .card-title to a <h*> tag. In the same way, links are added and placed next to each other by adding .card-link to an <a> tag ",
+			"comments": 5,
+			"images":  "./images/city.jpg"
+				
+			
+
+		},
+
+		{
+			"id": "2",
+			"time": "5",
+			"nickname": "peter",
+			"likes": 50,
+			"post": " some quick example text to build on the card title and make up the bulk of the cards content.  ",
+			"comments": 15,
+			"images":  "./images/glasses.jpg"
+				
+			
+
+		},
+
+		{
+			"id": "3",
+			"time": "4",
+			"nickname": "andrew",
+			"likes": 100,
+			"post": "Some quick example text to build on the card title and make up the bulk of the cards content. Card titles are used by adding .card-title to a <h*> tag. In the same way, links are added and placed next to each other by adding .card-link to an <a> tag ",
+			"comments": 10,
+			"images":  "./images/hardware.jpg"
+				
+			
+		},
+
+		{
+			"id": "4",
+			"time": "25",
+			"nickname": "jason",
+			"likes": 150,
+			"post": "Some quick example text to build on the card title and make up the bulk of the cards content. Card titles are used by adding .card-title to a <h*> tag. In the same way, links are added and placed next to each other by adding .card-link to an <a> tag ",
+			"comments": 8,
+			"images": "./images/laptop.jpg"
+				 
+			
+
+		}
+
+	]
+}
+	
+	
+	
