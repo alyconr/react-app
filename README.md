@@ -1,6 +1,10 @@
-# Aplicación React EstáticA
+# Aplicación React Estática 🔗 💡
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El objetivo del ejercicio es la construcción de una aplicación web React.js con diferentes components que 
+tenga como resultado la siguiente interfaz de usuario (Mobile first):
+
+![Aplicación web react](https://i.imgur.com/Yf8WuIJ.jpg)
+
 
 ## Available Scripts
 
