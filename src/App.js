@@ -68,7 +68,7 @@ changeProfile() {
           <Cards  key={index} title={tweet.nickname} description={tweet.post} img={tweet.images} time={tweet.time}  comments={tweet.comments} /> 
              );
     });
-    const delaySearchTweet = _.debounce((tweetSearch) => { this.changeTweet(tweetSearch)}, 1000); 
+    const delaySearchTweet = _.debounce((tweetSearch) => { this.changeTweet(tweetSearch)}, 2000); 
 
     
     return (
