@@ -1,22 +1,25 @@
+import Counter from "./counter";
 
-function Cards ({id, title, description, img, time, likes, comments}) {
+
+function Cards ({  title, description, img, time,  comments}) {
+
+
 
     return (
 
        
-            <div className="col">
-                <div  className="card  ">
-                 <img id="imagen" src={img} className="card-img-top " alt="teewt-Image" />
-                    <div className="card-body">
-                       <div className="row  ">
-                            <div className="col ">
-                                <h5>{time} min ago</h5>
-                                
-                            </div>
-                            <div className="col d-flex justify-content-end">
-                                <h5><a className="btn btn-lg btn-danger" href="#"><span                                                          className="glyphicon glyphicon-heart fs-4 ">{likes}k</span></a></h5>
-
-                            </div>
+        <div className="col">
+            <div  className="card  ">
+                <img id="imagen" src={img} className="card-img-top " alt="tweet" />
+                     <div className="card-body">
+                         <div className="row  ">
+                             <div className="col ">
+                                <h5>{time}min ago</h5>
+                             </div>
+                                <div className="col d-flex justify-content-end">
+                                    <Counter />
+                                    
+                                </div>
                         </div>
                        
                        

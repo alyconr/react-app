@@ -2,3 +2,23 @@
   font-size: 40px;
  }
 
+
+ .btn-change{
+
+  -webkit-transition: all 0.5s ease-in-out;
+ 
+
+}
+.btn-change:hover{
+  -webkit-transform: scale(1.2);
+  background: #dc3545;
+  color: black;
+}
+
+.cat {
+  border-radius: 50%;
+}
+
+.loadbars {
+  width: 50%;
+}
