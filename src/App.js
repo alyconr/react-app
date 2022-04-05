@@ -21,8 +21,8 @@ class App extends React.Component {
 
   tickProgress() {  //progress bar
     if (this.state.progresState < 100) {
-      this.setState({ progresState: this.state.progresState + 4});
-      setTimeout(() => this.tickProgress(), 200);
+      this.setState({ progresState: this.state.progresState + 1 });
+      setTimeout(() => this.tickProgress(), 20);
     }
   }
   increaseProgress(value) { 
@@ -43,13 +43,19 @@ class App extends React.Component {
 
   changeTweet(newTweet) { 
     this.setState({
-      tweetSearch: newTweet,  });
+      tweetSearch: newTweet,
+      showProfile: false,
+      showTweets: false,
+      });
  }
 
 
 changeProfile() {
     this.setState({
       showProfile: !this.state.showProfile ,
+      tweetSearch: '',
+      showTweets: false,
+      
     
     });
   }
@@ -57,6 +63,8 @@ changeProfile() {
   changeThreepics() {
     this.setState({
       showTweets: !this.state.showTweets ,
+      tweetSearch: '',
+      showProfile: false,
     });
   }
 
