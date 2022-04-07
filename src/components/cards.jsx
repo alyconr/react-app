@@ -1,4 +1,5 @@
 import Counter from "./counter";
+import React  from "react";
 
 
 function Cards ({  title, description, img, time,  comments}) {

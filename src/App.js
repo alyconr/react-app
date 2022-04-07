@@ -8,6 +8,11 @@ import Profile from './components/profile';
 import Cards from './components/cards';
 import info from './data/tweets.json'
 import _ from 'lodash';
+import Login from './components/login';
+import axios from 'axios';
+
+
+
 
 class App extends React.Component {
   state= {
@@ -16,6 +21,9 @@ class App extends React.Component {
     showTweets: false,
     progresState: 0,
     barBind: false,
+    username: '',
+    password: '',
+  
   
   };
 
@@ -37,6 +45,43 @@ class App extends React.Component {
   componentWillUnmount () {
     clearInterval(this.interval);
   }
+// http request to get data from server Three Pics
+ nameHandleChange = (name) => {
+  this.setState({ username: name });
+
+  }
+  passwordHandleChange = (password) => {
+
+    this.setState({ password: password });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    const data = { username: this.state.username, password: this.state.password };
+    const headers = { 
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer'   + localStorage.getItem('token')
+    };
+// axios request to post data to server
+    axios.post(`http://localhost:5000/item`, data, { headers: headers })
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+      localStorage.setItem('token', res.data.token);
+     if (res.data.success === true) {
+      this.setState({ showProfile: true });
+     
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
+
+ 
+
+  
   changeBar() {
     this.setState({ barBind: !this.state.barBind });
   }
@@ -48,6 +93,9 @@ class App extends React.Component {
       showTweets: false,
       });
  }
+
+
+
 
 
 changeProfile() {
@@ -91,14 +139,21 @@ changeProfile() {
            />
    
            <Inputsearch 
-           onChangeBar={(barBind) => {this.changeBar(barBind); }} barBind={this.state.barBind}
+           onChangeBar={(barBind) => {this.changeBar(barBind); }} barBind={this.state.barBind} 
                onSearch={delaySearchTweet}
            />
          
          {this.state.barBind ? <div className="progress-bar loadbars" style={{ width:  `${this.state.progresState}%` }}>Searching Tweet </div>   : null}       
-
+        
+         <Login 
+          onNameHandleChange={(username)  => {this.nameHandleChange(username); }}
+          onPasswordHandleChange={(password) => {this.passwordHandleChange(password); }}
+         onSubmitChange={(event) => {this.handleSubmit(event); }}
+          />
            
          {this.state.showTweets ? <div className="row row-cols-1 row-cols-md-2 g-4 m-2"> {tweetComponents} </div> : null}
+
+         
         
            <Searchlist  tweetSearch={this.state.tweetSearch} />  
 
