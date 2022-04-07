@@ -1,4 +1,4 @@
-# Aplicación React Dinámica 🔗 💡
+# Aplicación React Dinámica HTTP 🔗 💡
 
 El objetivo del ejercicio es la construcción de una aplicación web React.js con diferentes components que 
 tenga como resultado la siguiente interfaz de usuario (Mobile first):
